@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redstore|Ecommerece website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Mohave', sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+
+        nav {
+            flex: 1;
+            text-align: right;
+        }
+
+        nav ul {
+            display: inline-block;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #555;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .container {
+            margin: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .col-2 {
+            flex-basis: 50%;
+            min-width: 300px;
+        }
+
+        .col-2 img {
+            max-width: 100%;
+            padding: 50px 0;
+        }
+
+        .col-2 h1 {
+            font-size: 50px;
+            line-height: 60px;
+            margin: 25px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff523b;
+            color: #fff;
+            padding: 8px 30px;
+            border-radius: 30px;
+            transition: background 0.5s;
+        }
+
+        .btn:hover {
+            background: #563434
+        }
+
+        .header {
+            background: radial-gradient(#fff, #ffd6d6);
+        }
+
+        .header .row {
+            margin-top: 70px;
+        }
+
+        .catogeries {
+            margin: 70px 0;
+        }
+
+        .col-3 {
+            flex-basis: 30%;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+
+        .col-3 img {
+            width: 100%;
+        }
+
+        .small-container {
+            max-width: 1080px;
+            margin: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .col-4 {
+            flex-basis: 25%;
+            padding: 10px;
+            min-width: 200px;
+            margin-bottom: 50px;
+            transition: transform 0.5s;
+        }
+
+        .col-4 img {
+            width: 100%;
+        }
+
+        .title {
+            text-align: center;
+            margin: 0 auto 80px;
+            position: relative;
+            line-height: 60px;
+            color: #555;
+        }
+
+        .title::after {
+            content: '';
+            background: #ff523b;
+            width: 80px;
+            height: 5px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h4 {
+            color: #555;
+            font-weight: normal;
+        }
+
+        .col-4 p {
+            font-size: 14px;
+        }
+
+        .rating .fa {
+            color: #ff523b;
+        }
+
+        .col-4:hover {
+            transform: translateY(-5px);
+        }
+
+        /*-----Offer----*/
+
+        .offer {
+            background: radial-gradient(#fff, #ffd6d6);
+            margin-top: 80px;
+            padding: 30px 0;
+        }
+
+        .col-2 .offer-img {
+            padding: 50px;
+        }
+
+        small {
+            color: #555;
+        }
+
+        /*--Testimonial--*/
+        .testimonial {
+            padding-top: 100px;
+        }
+
+        .testimonial .col-3 {
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transform: transform 0.5s;
+        }
+        .testimonial .col-3 img {
+            width: 50px;
+            margin-top: 20px;
+            border-radius: 50%;
+        }
+        .testimonial .col-3:hover {
+            transform: translateY(-10px);
+        }
+        .col-3 p {
+            font-size: 12px;
+            margin: 12px 0;
+            color: #777;
+        }
+
+        .testimonial .col-3 h3 {
+            font-weight: 600;
+            font-size: 16px;
+            color: #555
+        }
+        .brands{
+            margin: 100px auto;
+        }
+        .col-5{
+            width:160px;
+        }
+        .col-5 img{
+            width:100%;
+            cursor:pointer;
+            filter:grayscale(100%);
+        }
+        .col-5 img:hover{
+            filter:grayscale(0);
+        }
+        .footer{
+            background: #000;
+            color:#8a8a8a;
+            font: size 14px;
+            padding:60px 0 20px;
+        }
+        .footer p{
+            color:#8a8a8a;
+        }
+        .footer h3{
+            color:#fff;
+            margin-bottom: 20px;
+        }
+        .footer-col-1,.footer-col-2,.footer-col-3{
+            min-width:250px;
+            margin-bottom:20px;
+            text-decoration: none;
+        }
+    .footer-col-2{
+        flex-basis:30%;
+    } 
+    .footer-col-1{
+        flex-basis:50%;
+        flex:1;
+        text-align:center;
+    }
+    .footer-col-1 img{
+        margin-bottom: 20px;
+    }
+    .footer-col-3{
+        flex-basis:12%;
+        text-align:center;
+    }
+    ul{
+        list-style-type:none;
+    }
+    .footer hr{
+        border:none;
+        background:#b5b5b5;
+        height:1px;
+        margin:20px 0;
+    }
+    .copyright{
+        text-align:center;
+    }
+    .menu-icon{
+        width:28px;
+        margin-left: 20px;
+        display: none;
+    }
+    /*--Media Queries here are used to make the menu display fit according to the display size--*/
+    @media only screen and (max-width:800px){
+        nav ul{
+            position:absolute;
+            top:70px;
+            left:0;
+            background:#333;
+            width:100%;
+            overflow: hidden;
+            transition: max-height 0.5s;
+        }
+        nav ul li{
+            display:block;
+            margin-right:50px;
+            margin-top:10px;
+            margin-bottom:10px;
+        }
+        nav ul li a{
+            color:#fff;
+        }
+        .menu-icon{
+            display: block;
+            cursor:pointer;
+        }
+    }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mohave:ital,wght@0,700;1,300;1,500;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="header">
+
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="sample/logo-shop.jpg" width="300px" height="87px">
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="sample.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="Account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <img src="sample/cart.png" width="30px" height="30px">
+                <img src="sample/menu.png" class="menu-icon" onclick="menutoogle()">
+                              
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1>Shopping is <br>A Great relaxation!!</h1>
+                    <p>Our online portal provides the great shopping experience without any troubles.<br>We also it
+                        provides the best quality at reasonalble prices</p>
+                    <br><br>
+                    <a href="" class="btn">Explore Now &#10147;</a>
+                </div>
+                <div class="col-2">
+                    <img src="sample/image1.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Featured Catogeries-->
+    <div class="catogeries">
+        <div class="small-container">
+
+            <div class="row">
+                <div class="col-3">
+                    <img src="sample/category-1.jpg">
+                </div>
+                <div class="col-3">
+                    <img src="sample/category-2.jpg">
+                </div>
+                <div class="col-3">
+                    <img src="sample/category-3.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Featured Products-->
+    <div class="small-container">
+        <h2 class="title">Featured Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="sample/product-1.jpg">
+                <h4>Red Printed Tshirt</h4>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <p>₹550</p>
+            </div>
+            <div class="col-4">
+                <img src="sample/product-2.jpg">
+                <h4>Puma shoes</h4>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+                <i class="fa fa-star-o"></i>
+                <p>₹850</p>
+            </div>
+            <div class="col-4">
+                <img src="sample/product-3.jpg">
+                <h4>Umbro Trackpant</h4>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <p>₹650</p>
+            </div>
+            <div class="col-4">
+                <img src="sample/product-4.jpg">
+                <h4>Puma Tshirt</h4>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <p>₹599</p>
+            </div>
+        </div>
+        <!--Latest Products-->
+        <h2 class="title">Latest Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="sample/product-5.jpg">
+                <h4>Reebok shoes</h4>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <p>₹4,550</p>
+            </div>
+            <div class="col-4">
+                <img src="sample/product-6.jpg">
+                <h4>Puma Sports T-shirt</h4>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+                <p>₹850</p>
+            </div>
+            <div class="col-4">
+                <img src="sample/product-7.jpg">
+                <h4>Ankle Length Socks</h4>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <p>₹50</p>
+            </div>
+            <div class="col-4">
+                <img src="sample/product-8.jpg">
+                <h4>Fossil Watch</h4>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <p>₹8,599</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="sample/product-9.jpg">
+                <h4>Roadster Watch</h4>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+                <p>₹10,550</p>
+            </div>
+            <div class="col-4">
+                <img src="sample/product-10.jpg">
+                <h4>Sparx Shoes</h4>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <p>₹850</p>
+            </div>
+            <div class="col-4">
+                <img src="sample/product-11.jpg">
+                <h4>Nike Walking Shoes</h4>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <p>₹8,599</p>
+            </div>
+            <div class="col-4">
+                <img src="sample/product-12.jpg">
+                <h4>Nike Track Pant</h4>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <p>₹1,599</p>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img src="sample/product-13.jpg">
+                    <h4>Samsung Galaxy Fold</h4>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <p>₹15,999</p>
+                </div>
+                <div class="col-4">
+                    <img src="sample/product-14.jpg">
+                    <h4>Oppo Phones</h4>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <p>₹10,250</p>
+                </div>
+                <div class="col-4">
+                    <img src="sample/product-15.png">
+                    <h4>Iphone 11</h4>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <p>₹1,10,000</p>
+                </div>
+                <div class="col-4">
+                    <img src="sample/product-16.png">
+                    <h4>Realme Phones</h4>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <p>₹16,599</p>
+                </div>
+        </div>
+    </div>
+    <!--Offers-->
+    <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="sample/exclusive.png" class="offer-img">
+                </div>
+                <div class="col-2">
+                    <p>Exclusively available on Redstore</p>
+                    <h1>Smart Band 4</h1>
+                    <small>The Mi Smart Band 4 Featres a 45% larger(than Mi Band 3)AMOLED color full-touch display with
+                        adjustable brightness,additional calling with band,so everything is clear as can be.</small>
+                    <a href="" class="btn">Buy Now &#8594;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Testimonial-->
+    <div class="testimonial">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="sample/user-1.png" alt="">
+                    <h3>Jenifer Lorez</h3>
+                    <i class="fa fa-quote-left"></i>
+                    <p>RedStore is User-Friendly Online E-commerce store </p>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="col-3">
+                    <img src="sample/user-2.png" alt="">
+                    <h3>Mike Smith</h3>
+                    <i class="fa fa-quote-left"></i>
+                    <p>RedStore is a great online e-commerce platform where all kinds of products available at one place
+                    </p>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <div class="col-3">
+                    <img src="sample/user-3.png" alt="">
+                    <h3>Mabel Joe</h3>
+                    <i class="fa fa-quote-left"></i>
+                    <p>RedStore need some changes,and it's a great online platform.</p>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!--brands-->
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="sample/logo-godrej.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="sample/logo-oppo.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="sample/logo-philips.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="sample/logo-white.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="sample/brands.jpg" height="200px" width="200px" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="sample/Mobile.jpg" height="200px" width="200px" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <img src="sample/logo-shop.jpg" width="300px" height="87px" alt="">
+                <p>Our Purporse is to sustainably Make the Pleasuer and Benfits of This E-Commerece Platform for all the users</p>
+                </div>
+                <div class="footer-col-2">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <a href=""><li>Coupons</li></a>
+                        <a href=""><li>Blog Post</li></a>
+                        <a href=""><li>Return Policy</li></a>
+                        <a href=""><li>Join Affiliate</li></a>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Follow Us</h3>
+                    <ul>
+                       <a href=""><li>Facebook</li></a>
+                        <a href=""><li>Twitter</li></a>
+                        <a href=""><li>Instagram</li></a>
+                        <a href=""><li>Youtube</li></a>
+                    </ul>
+                </div>  
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2021-EShop</p>
+        </div>
+    </div>
+    <!--Js For Toogle Menu-->
+    <script>
+        var MenuItems=document.getElementById("MenuItems");
+        MenuItems.style.maxHeight="0px";
+        function menutoogle(){
+            if(MenuItems.style.maxHeight=="0px"){
+                MenuItems.style.maxHeight="200px";
+            }
+            else{
+                MenuItems.style.maxHeight="0px";
+            }
+        }
+    </script>
+</body>
+
+</html>
